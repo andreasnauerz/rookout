@@ -4,6 +4,7 @@ rookout.connect('cloud.agent.rookout.com', 443, '6771d7318fd83852f48b39009e73ead
 
 exports.main = rookout.wrap(
     function main(params) {
+    	console.log("Test");
     	return { message: 'Hello World' };
     }
 );
