@@ -1,5 +1,10 @@
-"scripts" : {
-    "install-modules": "docker run -it -v `pwd`:`pwd` -w `pwd` node:6 npm install",
-    "build-package": "zip -r action.zip *",
-    "build": "npm run install-modules && npm run build-package"
+{
+    "name": "my-action",
+    "version": "1.0.0",
+    "main": "index.js",
+	"scripts" : {
+	    "install-modules": "docker run -it -v `pwd`:`pwd` -w `pwd` node:6 npm install",
+	    "build-package": "zip -r action.zip *",
+	    "build": "npm run install-modules && npm run build-package"
+	}
 }
