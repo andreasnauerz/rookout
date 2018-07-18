@@ -4,7 +4,17 @@ rookout.connect('cloud.agent.rookout.com', 443, '6771d7318fd83852f48b39009e73ead
 
 exports.main = rookout.wrap(
     function main(params) {
-    	console.log("Test");
-    	return { message: 'Hello World' };
+    	console.log("params.name: " + params.name);
+    	console.log("params.place: " + params.place);
+
+    	if (params.name == null) {
+    		throw new Error("Expected parameter name is null");
+    	}
+
+    	if (params.place == null) {
+    		throw new Error("Expected parameter place is null");
+    	}
+
+    	return { message: "Hello " + params.name +  " from " + params.place };
     }
 );
